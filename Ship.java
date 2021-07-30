@@ -8,7 +8,7 @@ public class Ship{
         if(hp > 0){
             return "生きてる";
         }else{
-            return "撃沈";
+            return "撃沈済み";
         }
     }
     
@@ -16,7 +16,7 @@ public class Ship{
     public static void bomb(int x,int y){
         System.out.println("はずれ！");
         System.out.println("波高し！");
-        System.out.println("命中だがまだ沈まない　移動します");
-        System.out.println("撃沈！");
+        System.out.println("爆弾が当たった！しかし船はまだ沈まない！船は移動します");
+        System.out.println("爆弾が当たった！撃沈しました！");
     }
 }
