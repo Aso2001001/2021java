@@ -2,6 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 import rpgcreature.Braver;
+import rpgcreature.Golem;
 import rpgcreature.Slime;
 import rpgcreature.Wizard;
 import rpgcreature.MetalSlime;
@@ -101,13 +102,15 @@ public class RPGMain {
         monsters = new Monster[MONSTER_NUM];
         for(int i=0; i < MONSTER_NUM; i++){
             //乱数を取得してモンスターを決定する
-            int value = r.nextInt(3);
+            int value = r.nextInt(4);
             if( value == 0 ){
                 monsters[i] = new Slime();
             }else if( value == 1){
                 monsters[i] = new Wizard();
-            }else{
+            }else if( value == 2){
                 monsters[i] = new MetalSlime();
+            }else{
+                monsters[i] = new Golem();
             }
         }
         
@@ -128,7 +131,7 @@ public class RPGMain {
         Monster monster = null;
         //モンスター存在確認
         do{
-            int index = r.nextInt(3);
+            int index = r.nextInt(4);
             monster = monsters[index];
         }while( !monster.isThere() );
 
