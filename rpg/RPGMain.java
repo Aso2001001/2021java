@@ -11,7 +11,7 @@ import rpgcreature.Monster;
 // メインクラス
 /////////////////////////////////////
 public class RPGMain {
-    private final int MONSTER_NUM=3;
+    private final int MONSTER_NUM=4;
     private final int COMMAND_BATTLE=1;
     private final int COMMAND_RECOVERY=2;
 
