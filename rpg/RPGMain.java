@@ -92,7 +92,7 @@ public class RPGMain {
         System.out.printf( "= %s                 =\n",braver.getName());
         System.out.printf( "= HP:%3d                 =\n",braver.getHp());
         System.out.println("==========================");
-        System.out.println("----[ターン"+(cnt++)+"]----");
+        System.out.println("----["+(cnt++)+"ターン目]----");
         System.out.println("どうしますか？1:たたかう 2:回復");
     
     }
