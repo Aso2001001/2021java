@@ -15,6 +15,7 @@ public class RPGMain {
     private final int MONSTER_NUM=4;
     private final int COMMAND_BATTLE=1;
     private final int COMMAND_RECOVERY=2;
+    int cnt = 1;
 
     private Braver braver;
     private Monster[] monsters;
@@ -91,7 +92,9 @@ public class RPGMain {
         System.out.printf( "= %s                 =\n",braver.getName());
         System.out.printf( "= HP:%3d                 =\n",braver.getHp());
         System.out.println("==========================");
+        System.out.println("----[ターン"+(cnt++)+"]----");
         System.out.println("どうしますか？1:たたかう 2:回復");
+    
     }
 
     /**
@@ -129,6 +132,8 @@ public class RPGMain {
         //どのモンスターに攻撃するかを決定する
         Random r = new Random();
         Monster monster = null;
+
+        
         //モンスター存在確認
         do{
             int index = r.nextInt(4);
